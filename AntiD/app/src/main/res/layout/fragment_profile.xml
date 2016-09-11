@@ -1,0 +1,27 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.angel.antid.ProfileFragment">
+
+    <TextView
+        android:id="@+id/hi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginTop="68dp"
+        android:text="Hi,"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:textSize="26dp"/>
+
+    <TextView
+        android:id="@+id/name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginTop="68dp"
+        android:text="Name"
+        android:layout_marginLeft="56dp"
+        android:textSize="26dp"/>
+
+</FrameLayout>
