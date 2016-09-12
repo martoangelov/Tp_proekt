@@ -2,16 +2,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUp">
+    tools:context=".EditFragment">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign Up"
+        android:text="Edit Profile"
         android:textSize="20dp"
-        android:textColor="@color/colorPrimary"
+        android:textColor="#fff"
         android:layout_marginTop="15dp"
         android:layout_gravity="center"
+        android:fontFamily="sans-serif-light"
         android:layout_centerHorizontal="true"
         android:id="@+id/toolbar_title" />
 
@@ -73,7 +74,7 @@
         android:id="@+id/text6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="398dp"
+        android:layout_marginTop="318dp"
         android:text="Gender:"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:textSize="18dp"/>
@@ -82,27 +83,46 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
-        android:layout_marginTop="428dp"
-        android:orientation="vertical">
+        android:layout_marginTop="348dp"
+        android:orientation="vertical"
+        android:id="@+id/radio_group">
         <RadioButton android:id="@+id/radio_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Male"
-            android:onClick="onRadioButtonClicked"/>
+            android:text="Male"/>
         <RadioButton android:id="@+id/radio_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Female"
-            android:onClick="onRadioButtonClicked"/>
+            android:text="Female"/>
     </RadioGroup>
 
-    <Button
-        android:id="@+id/okButton"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:orientation="horizontal"
+        android:paddingLeft="4.0dip"
+        android:paddingTop="5.0dip"
+        android:paddingRight="4.0dip"
+        android:paddingBottom="1.0dip"
+        android:gravity="center_horizontal"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:text="Sign Up"/>
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="Cancel"/>
+
+        <Button
+            android:id="@+id/okButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="Submit"/>
+
+    </LinearLayout>
 
 </RelativeLayout>

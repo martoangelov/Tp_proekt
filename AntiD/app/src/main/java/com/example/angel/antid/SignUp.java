@@ -19,7 +19,6 @@ public class SignUp extends Activity {
 
     private String gender = null;
     private EditText name = null;
-    private EditText age = null;
     private EditText weight = null;
     private EditText height = null;
     private Button button;
@@ -31,7 +30,6 @@ public class SignUp extends Activity {
         setContentView(R.layout.signup);
 
         name = (EditText) findViewById(R.id.name);
-        age = (EditText) findViewById(R.id.age);
         weight = (EditText) findViewById(R.id.weight);
         height = (EditText) findViewById(R.id.height);
 
@@ -68,7 +66,6 @@ public class SignUp extends Activity {
 
             User user = new User();
             user.setName(name.getText().toString());
-            user.setAge(age.getText().toString());
             user.setWeight(weight.getText().toString());
             user.setHeight(height.getText().toString());
             user.setGender((null == gender ? "" : gender.toString()));

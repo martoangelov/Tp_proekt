@@ -10,7 +10,6 @@ import java.util.List;
 public class User {
 
     private String name;
-    private String age;
     private String weight;
     private String height;
     private String gender;
@@ -20,7 +19,6 @@ public class User {
         SharedPreferences prefs = context.getSharedPreferences("com.example.user.a2fit", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
         editor.putString("name", this.name);
-        editor.putString("age", this.age);
         editor.putString("weight", this.weight);
         editor.putString("height", this.height);
         editor.putString("gender", this.gender);
@@ -31,7 +29,6 @@ public class User {
         boolean result = false;
         SharedPreferences prefs = context.getSharedPreferences("com.example.user.a2fit", Context.MODE_PRIVATE);
         name = prefs.getString("name", "");
-        age = prefs.getString("age", "");
         weight = prefs.getString("weight", "");
         height = prefs.getString("height", "");
         gender = prefs.getString("gender", "");
@@ -51,7 +48,6 @@ public class User {
     public String toString () {
         String result = "";
         result += "name: " + name + " | ";
-        result += "age: " + age + " | ";
         result += "weight: " + weight + " | ";
         result += "height: " + height + " | ";
         result += "gender: " + gender + " | ";
@@ -67,12 +63,6 @@ public class User {
             result.add("Name field is empty");
         }else if(name.matches("[0-9]+") || name.length() > 35) {
             result.add("Enter valid name");
-        }
-
-        if(age == null || age.trim().equals("")){
-            result.add("Age field is empty");
-        }else if(age.matches("[a-zA-Z]+") || age.length() > 2) {
-            result.add("Enter valid age");
         }
 
         if(weight == null || weight.trim().equals("")){
@@ -94,16 +84,8 @@ public class User {
         return result;
     }
 
-    public String getAge() {
-        return age;
-    }
-
     public String getGender() {
         return gender;
-    }
-
-    public void setAge(String age) {
-        this.age = age;
     }
 
     public void setGender(String gender) {
